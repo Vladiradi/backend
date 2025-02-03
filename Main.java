@@ -22,7 +22,7 @@ public class Main {
             }
 
             System.out.print("Enter the position for " + cat.getCatName() + " (e.g., Home, Outside): ");
-            scanner.nextLine();  // Consume the leftover newline character
+            scanner.nextLine();
             String position = scanner.nextLine();
             cat.setCatPosition(position);
 
