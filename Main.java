@@ -5,6 +5,5 @@ public class Main {
         new Task2().execute();
         new Task3().execute();
         new Task4().execute();
-
     }
 }

@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class Task2 {
     public void execute() {
         System.out.println("\nTask 2: Разбиение числа");
-
         int number = getInputNumber();
         if (isValidThreeDigitNumber(number)) {
             printDigits(number);
@@ -25,7 +24,6 @@ public class Task2 {
         int hundreds = number / 100;
         int tens = (number / 10) % 10;
         int units = number % 10;
-
         System.out.printf("Число %d -> %d, %d, %d%n", number, hundreds, tens, units);
     }
 }

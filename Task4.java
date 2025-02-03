@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Task4 {
     public void execute() {
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +8,6 @@ public class Task4 {
 
         System.out.println("Введите второе число:");
         double secondNumber = scanner.nextDouble();
-
         double sum = firstNumber + secondNumber;
         double difference = firstNumber - secondNumber;
         double product = firstNumber * secondNumber;
