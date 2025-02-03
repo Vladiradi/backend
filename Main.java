@@ -26,7 +26,6 @@ public class Main {
             String position = scanner.nextLine();
             cat.setCatPosition(position);
 
-            // Print the cat's information
             cat.printInfo();
         }
 

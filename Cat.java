@@ -11,8 +11,8 @@ public class Cat {
         this.catAge = catAge;
         this.ownerName = ownerName;
         this.foodPacksPerDay = foodPacksPerDay;
-        this.catPosition = "Home";  // Default position
-        this.foodPacksAvailable = 0;  // Initial food packs
+        this.catPosition = "Home";
+        this.foodPacksAvailable = 0;
     }
 
     public String getCatName() {
