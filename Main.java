@@ -3,5 +3,8 @@ public class Main {
         System.out.println("Запуск задач:");
         new Task1().execute();
         new Task2().execute();
+        new Task3().execute();
+        new Task4().execute();
+
     }
 }
