@@ -10,51 +10,32 @@
 //Преобразуйте строку к нижнему регистру.
 //Вырезать строку Java c помощью метода String.substring().
 
-//
-//public class Task1 {
-//    public void execute() {
-//        String myString = new String("I study Basic Java!");
-//        metodforstring(myString);
-//
-//    }
-//}
-
-
-
 
 public class Task1 {
     public void execute() {
-        // 1. Создание строки через оператор new
         String myString = new String("I study Basic Java!");
-
-        // 2. Вызов метода для работы со строкой
         manipulateString(myString);
     }
 
     private void manipulateString(String inputString) {
-        // 1. Получение последнего символа строки
         char lastChar = inputString.charAt(inputString.length() - 1);
         System.out.println("Последний символ строки: " + lastChar);
 
-        // 2. Проверка, содержит ли строка подстроку "Java"
         boolean containsJava = inputString.contains("Java");
         System.out.println("Содержит ли строка подстроку \"Java\"? " + containsJava);
 
-        // 3. Замена всех символов 'a' на 'o'
         String replacedString = inputString.replace('a', 'o');
         System.out.println("Строка после замены 'a' на 'o': " + replacedString);
 
-        // 4. Преобразование строки в верхний регистр
         String upperCaseString = inputString.toUpperCase();
         System.out.println("Строка в верхнем регистре: " + upperCaseString);
 
-        // 5. Преобразование строки в нижний регистр
         String lowerCaseString = inputString.toLowerCase();
         System.out.println("Строка в нижнем регистре: " + lowerCaseString);
 
-        // 6. Вырезание подстроки "Java" с помощью substring()
+
         int startIndex = inputString.indexOf("Java");
-        if (startIndex != -1) { // Если "Java" присутствует в строке
+        if (startIndex != -1) {
             String subStringJava = inputString.substring(startIndex, startIndex + 4);
             System.out.println("Вырезанная подстрока: " + subStringJava);
         } else {
@@ -62,7 +43,6 @@ public class Task1 {
         }
     }
 
-    // Метод main для запуска программы
     public static void main(String[] args) {
         Task1 task = new Task1();
         task.execute();
