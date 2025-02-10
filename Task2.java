@@ -31,7 +31,7 @@ public class Task2 {
     private double divide(double a, double b) {
         if (b == 0) {
             System.out.println("Ошибка: деление на ноль!");
-            return Double.NaN; // Возвращает NaN (Not a Number) в случае ошибки
+            return Double.NaN;
         }
         return a / b;
     }
