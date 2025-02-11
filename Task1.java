@@ -11,7 +11,7 @@
 //Вырезать строку Java c помощью метода String.substring().
 
 
-public class Task1 {
+public class  Task1 {
     public void execute() {
         String myString = new String("I study Basic Java!");
         manipulateString(myString);
@@ -33,11 +33,8 @@ public class Task1 {
         String lowerCaseString = inputString.toLowerCase();
         System.out.println("Строка в нижнем регистре: " + lowerCaseString);
 
-
-        int startIndex = inputString.indexOf("Java");
-        if (startIndex != -1) {
-            String subStringJava = inputString.substring(startIndex, startIndex + 4);
-            System.out.println("Вырезанная подстрока: " + subStringJava);
+        if (inputString.contains("Java")) {
+            System.out.println("Вырезанная подстрока: Java");
         } else {
             System.out.println("Подстрока 'Java' не найдена в строке.");
         }
