@@ -4,9 +4,9 @@
 
 
 public class Dog {
-        private String breed;      // Порода
-        private String type;       // Тип (охотничья, декоративная и т. д.)
-        private int age;           // Возраст
+        private String breed;
+        private String type;
+        private int age;
         private String ownerName;  // Имя владельца
 
     public Dog() {
