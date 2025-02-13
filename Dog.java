@@ -1,13 +1,13 @@
 //Создать класс собака, определить в нем переменные: порода, тип:(охотничья, декоративная и тд),
 //возраст, имя владельца, сделать конструкторы
-//        (по умолчанию, с именем, с именем и породой, с именем породой и типом, с именем породой и типом и именем владельца))
+//по умолчанию, с именем, с именем и породой, с именем породой и типом, с именем породой и типом и именем владельца))
 
 
 public class Dog {
         private String breed;
         private String type;
         private int age;
-        private String ownerName;  // Имя владельца
+        private String ownerName;
 
     public Dog() {
             this.breed = "Неизвестная";
@@ -44,7 +44,6 @@ public class Dog {
             this.ownerName = ownerName;
         }
 
-
         public void displayInfo() {
             System.out.println("Порода: " + breed);
             System.out.println("Тип: " + type);
@@ -52,14 +51,12 @@ public class Dog {
             System.out.println("Владелец: " + ownerName);
         }
 
-
         public static void main(String[] args) {
             Dog dog1 = new Dog();
             Dog dog2 = new Dog("Лабрадор");
             Dog dog3 = new Dog("Овчарка", "Служебная");
             Dog dog4 = new Dog("Хаски", "Спортивная", 3);
             Dog dog5 = new Dog("Бигль", "Охотничья", 5, "Алексей");
-
             System.out.println("Информация о собаках:");
             dog1.displayInfo();
             System.out.println();
