@@ -59,8 +59,6 @@ public class Calculator {
 
 
 
-
-
         switch (operator) {
             case '+':
                 result = argOne + argTwo;
