@@ -28,7 +28,6 @@ public class Calculator {
     }
 
 
-
     private static void calc() {
 
         Locale.setDefault(Locale.ENGLISH);
