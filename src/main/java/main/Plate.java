@@ -10,7 +10,7 @@ public class Plate {
       }
       public void serve(){
           if (serving > 0 ) {
-              System.out.println("This plate is served by " + dishName);
+              System.out.println("This plate is served with " + dishName);
               serving--;
               System.out.println("Portions left: " + serving);
           } else {
@@ -30,11 +30,22 @@ public class Plate {
           this.serving = serving;
       }
 
+
     public static void main(String[] args) {
+
         Plate[] plates = {
                 new Plate("Sushi", 10),
-                new Plate("Sake", 20),
-                new Plate("Misosoup", 30),
+                new Plate("Sake", 2),
+                new Plate("Miso", 5)
+        };
+
+        for (Plate plate : plates) {
+            System.out.println("Dish" + plate.getDishName());
+            plate.serve();
+            System.out.println();
         }
     }
 }
+
+
+
