@@ -1,8 +1,7 @@
 package main;
 
 class Dog extends Animal {
-    @Override
-    public void eat() {
-        System.out.println("Dog eats");
+    public Dog(int age) {
+        super(age);
     }
 }

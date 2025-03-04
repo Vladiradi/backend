@@ -1,5 +1,8 @@
 package main;
 
 abstract class Animal {
-    public abstract void eat();
+    protected int age;
+    public Animal(int age) {
+        this.age = age;
+    }
 }
