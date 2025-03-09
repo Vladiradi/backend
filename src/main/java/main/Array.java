@@ -1,6 +1,5 @@
 package main;
 
-
 public class Array {
     public static void main(String[] args) {
         int[] arr1  = {1,2,32,266,259};
