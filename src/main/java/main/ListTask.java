@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import java.util.*;
+
 public class ListTask {
     public static void main(String[] args) {
         Random random = new Random();
@@ -22,8 +24,11 @@ public class ListTask {
         int min = findMin(integers);
         System.out.println("Min: " + min);
 
-//        List<Integer> reversed = reverseList(integers);
-//        System.out.println("Reverse list: " + reversed);
+        List<Integer> reversed = reverseList(integers);
+        System.out.println("Обратный список: " + reversed);
+
+
+        splitEvenOdd(integers);
     }
 
 
@@ -35,6 +40,7 @@ public class ListTask {
         return min;
     }
 
+
     public static int findMax(List<Integer> list) {
         int max = list.get(0);
         for (int num : list) {
@@ -43,7 +49,34 @@ public class ListTask {
         return max;
     }
 
+
+    public static List<Integer> reverseList(List<Integer> list) {
+        List<Integer> reversed = new ArrayList<>(list);
+        Collections.reverse(reversed);
+        return reversed;
+    }
+
+
+    public static void splitEvenOdd(List<Integer> list) {
+        List<Integer> even = new ArrayList<>();
+        List<Integer> odd = new ArrayList<>();
+
+        for (int num : list) {
+            if (num % 2 == 0) {
+                even.add(num);
+            } else {
+                odd.add(num);
+            }
+        }
+
+
+        System.out.println("Чётные числа: " + even);
+        System.out.println("Нечётные числа: " + odd);
+    }
 }
+
+
+
 
 
 
