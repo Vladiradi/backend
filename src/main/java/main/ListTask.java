@@ -1,16 +1,15 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import java.util.*;
 
 public class ListTask {
+    static List<Integer> even = new ArrayList<>();
+    static List<Integer> odd = new ArrayList<>();
+
     public static void main(String[] args) {
+
         Random random = new Random();
         List<Integer> integers = new ArrayList<>();
-
 
         for (int i = 0; i < 10; i++) {
             integers.add(random.nextInt(100));
@@ -25,12 +24,12 @@ public class ListTask {
         System.out.println("Min: " + min);
 
         List<Integer> reversed = reverseList(integers);
-        System.out.println("Обратный список: " + reversed);
-
+        System.out.println("Reverse list: " + reversed);
 
         splitEvenOdd(integers);
+        System.out.println("Even numbers: " + even);
+        System.out.println("Odd numbers: " + odd);
     }
-
 
     public static int findMin(List<Integer> list) {
         int min = list.get(0);
@@ -40,7 +39,6 @@ public class ListTask {
         return min;
     }
 
-
     public static int findMax(List<Integer> list) {
         int max = list.get(0);
         for (int num : list) {
@@ -49,17 +47,17 @@ public class ListTask {
         return max;
     }
 
-
     public static List<Integer> reverseList(List<Integer> list) {
-        List<Integer> reversed = new ArrayList<>(list);
-        Collections.reverse(reversed);
+        List<Integer> reversed = new ArrayList<>();
+        for (int i = list.size() - 1; i >= 0; i--) {
+            reversed.add(list.get(i));
+        }
         return reversed;
     }
 
-
     public static void splitEvenOdd(List<Integer> list) {
-        List<Integer> even = new ArrayList<>();
-        List<Integer> odd = new ArrayList<>();
+        even.clear();
+        odd.clear();
 
         for (int num : list) {
             if (num % 2 == 0) {
@@ -68,18 +66,8 @@ public class ListTask {
                 odd.add(num);
             }
         }
-
-
-        System.out.println("Чётные числа: " + even);
-        System.out.println("Нечётные числа: " + odd);
     }
 }
-
-
-
-
-
-
 
 
 
