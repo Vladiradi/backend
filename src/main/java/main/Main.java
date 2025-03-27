@@ -1,9 +1,8 @@
 package main;
 
-
 public class Main {
     public static void main(String[] args) {
-        Calculator<Integer> intCalc = new IntegerCalculator();
+        Calculator<Integer> intCalc = new ModernCalculator(); // или IntegerCalculator
         System.out.println("Integer add: 5 + 3 = " + intCalc.add(5, 3));
         System.out.println("Integer sub: 5 - 3 = " + intCalc.sub(5, 3));
         System.out.println("Integer multi: 5 * 3 = " + intCalc.multi(5, 3));
@@ -11,10 +10,10 @@ public class Main {
 
         System.out.println();
 
-        Calculator<Double> doubleCalc = new DoubleCalculator();
-        System.out.println("Double add: 5.5 + 3.2 = " + doubleCalc.add(5.5, 3.2));
-        System.out.println("Double sub: 5.5 - 3.2 = " + doubleCalc.sub(5.5, 3.2));
-        System.out.println("Double multi: 5.5 * 3.2 = " + doubleCalc.multi(5.5, 3.2));
-        System.out.println("Double div: 6.4 / 3.2 = " + doubleCalc.div(6.4, 3.2));
+        Concert<Performer> concert = new Concert<>();
+        concert.addPerformer(new Singer());
+        concert.addPerformer(new Dancer());
+
+        concert.start();
     }
 }
