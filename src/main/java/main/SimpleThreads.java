@@ -36,7 +36,7 @@ public class SimpleThreads {
         for (Thread t : threads) {
             t.join();
         }
-        System.out.println("Все потоки завершены.");
+        System.out.println("All threads finished");
 
     }
     }

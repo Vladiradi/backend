@@ -14,9 +14,9 @@ import java.util.Scanner;
 class CountDiv {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите делитель number: ");
+        System.out.print("Write  devisor number: ");
         int divider = scanner.nextInt();
-        System.out.print("Введите количество потоков: ");
+        System.out.print("Write amount of threads: ");
         int countThreads = scanner.nextInt();
 
         long startSingle = System.currentTimeMillis();
@@ -27,8 +27,8 @@ class CountDiv {
             }
         }
         long endSingle = System.currentTimeMillis();
-        System.out.println("Однопоточный результат: " + singleCounter);
-        System.out.println("Время в 1 поток: " + (endSingle - startSingle) + " мс");
+        System.out.println("One thread result: " + singleCounter);
+        System.out.println("Time in single thread: " + (endSingle - startSingle) + " ms");
 
         long startMulti = System.currentTimeMillis();
         long range = ((long) Integer.MAX_VALUE - (long) Integer.MIN_VALUE + 1) / countThreads;
@@ -49,8 +49,8 @@ class CountDiv {
         }
 
         long endMulti = System.currentTimeMillis();
-        System.out.println("Многопоточный результат: " + total);
-        System.out.println("Время в " + countThreads + " потоков: " + (endMulti - startMulti) + " мс");
+        System.out.println("Multithread result: " + total);
+        System.out.println("Time in " + countThreads + " threads: " + (endMulti - startMulti) + " мс");
     }
 
     static class DividerCounterThread extends Thread {

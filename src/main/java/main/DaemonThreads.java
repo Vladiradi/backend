@@ -4,7 +4,6 @@
 //        Все дочерние потоки должны автоматически закрыться. (Daemons)
 
 
-
 package main;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +19,7 @@ class DaemonThreads {
         }
 
         Thread.sleep(1000);
-        System.out.println("Главный поток завершён (демоны завершатся автоматически).\n");
+        System.out.println("Main thread is done, daemons are also done.\n");
     }
 
     static class DaemonSumTask implements Runnable {
@@ -33,15 +32,15 @@ class DaemonThreads {
         @Override
         public void run() {
             long sum = 0;
-            for (int i = 0; i <= 10_000_000; i++) {
+            for (int i = 0; i <= 10000000; i++) {
                 if (i % 17 == 0) {
                     sum += i;
-                    if (i % 1_000_000 == 0) {
-                        System.out.println("Поток #" + threadId + " накопил: " + sum);
+                    if (i % 1000000 == 0) {
+                        System.out.println("Thread #" + threadId + " has: " + sum);
                     }
                 }
             }
-            System.out.println("Поток #" + threadId + " завершил подсчёт: " + sum);
+            System.out.println("Thread #" + threadId + " count is ready: " + sum);
         }
     }
 }
