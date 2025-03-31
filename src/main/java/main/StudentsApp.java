@@ -9,7 +9,7 @@ public class StudentsApp {
         Student alex = new Student("Alex", 25);
         Student oleg = new Student("Oleg", 20);
         Student max = new Student("Max", 18);
-        Student max2 = new Student("Max", 22); // для проверки сортировки по возрасту при одинаковых именах
+        Student max2 = new Student("Max", 22);
 
         List<Student> students = new ArrayList<>();
         students.add(alex);
@@ -22,11 +22,11 @@ public class StudentsApp {
             System.out.println(s);
         }
 
-//        Comparator<Student> comparator = new NameAgeComparator();
-//        Collections.sort(students, comparator);
+        Comparator<Student> comparator = new NameAgeComparator();
+        Collections.sort(students, comparator);
 
 
-         Collections.sort(students, new NameAgeComparator());
+//         Collections.sort(students, new NameAgeComparator());
 
         System.out.println("\nAfter sort by name, then age:");
         for (Student s : students) {

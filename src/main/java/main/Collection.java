@@ -16,22 +16,3 @@ public class Collection {
     }
 
 }
-
-//
-//public class CompareExample {
-//
-//    public static void main(String[] args) {
-//        List<Integer> integers = new ArrayList<>();
-//        integers.add(6);
-//        integers.add(3);
-//        integers.add(1);
-//        integers.add(7);
-//        integers.add(9);
-//
-//        System.out.println("Before sort: " + integers);
-//
-//        Collections.sort(integers);
-//
-//        System.out.println("After sort: " + integers);
-//    }
-//}
