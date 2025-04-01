@@ -1,12 +1,10 @@
 package main;
 
-
-public class Student {
-
+public class Author {
     private String name;
     private int age;
 
-    public Student(String name, int age) {
+    public Author(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -21,11 +19,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return name;
     }
 }
-
-
