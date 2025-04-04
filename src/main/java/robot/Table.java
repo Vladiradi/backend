@@ -1,5 +1,4 @@
-package telran;
-
+package robot;
 class Table {
     private boolean hasPart = false;
 

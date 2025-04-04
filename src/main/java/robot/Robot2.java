@@ -1,4 +1,4 @@
-package telran;
+package robot;
 class Robot2 implements Runnable {
     private final int parts;
     private final Table table;

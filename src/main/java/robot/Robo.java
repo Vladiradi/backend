@@ -1,5 +1,4 @@
-package telran;
-import java.awt.*;
+package robot;
 import java.util.Scanner;
 public class Robo {
     public static void main(String[] args) {
