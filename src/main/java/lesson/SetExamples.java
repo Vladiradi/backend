@@ -2,6 +2,7 @@ package lesson;
 
 import java.util.*;
 
+
 public class SetExamples {
     public static void main(String[] args) {
         // === HashSet ===
@@ -12,6 +13,9 @@ public class SetExamples {
 
         // Check if the set contains an element
         System.out.println("HashSet contains 'Apple'? " + hashSet.contains("Apple"));
+        for (String item : hashSet) {
+            System.out.println("HashSet item: " + item);
+        }
 
         // Remove an element
         hashSet.remove("Banana");
@@ -34,6 +38,9 @@ public class SetExamples {
         // Same operations
         linkedHashSet.remove("Orange");
         System.out.println("LinkedHashSet contains 'Orange'? " + linkedHashSet.contains("Orange"));
+        for (String item : linkedHashSet) {
+            System.out.println("LinkedHashSet item: " + item);
+        }
         System.out.println("LinkedHashSet: " + linkedHashSet);
 
         // === TreeSet ===
@@ -43,11 +50,27 @@ public class SetExamples {
         treeSet.add("Orange");
 
         System.out.println("TreeSet contains 'Banana'? " + treeSet.contains("Banana"));
+        for (String item : treeSet) {
+            System.out.println("TreeSet item: " + item);
+        }
         System.out.println("TreeSet first element: " + ((TreeSet<String>) treeSet).first()); // Extra TreeSet feature
         System.out.println("TreeSet: " + treeSet);
 
         // Clear the TreeSet
         treeSet.clear();
         System.out.println("TreeSet cleared. Is empty? " + treeSet.isEmpty());
+
+        // === Add check ===
+        boolean result = treeSet.add("A");
+        System.out.println("Is A added ? " + result);
+
+        boolean resultOne = treeSet.add("S");
+        System.out.println("Is S added ? " + resultOne);
+
+        System.out.println(treeSet);
+
+
+
+        SortedSet<Integer> sortedSet = new TreeSet<>();
     }
 }
