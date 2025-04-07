@@ -12,26 +12,11 @@ public class TaskOne {
             char c = str.charAt(i);
             set.add(c);
         }
-        System.out.println(set);
-
+        int index = 1;
+        for (Character c : set)  {
+            System.out.println(index + ":   " + c);
+            index++;
+        }
     }
-
-
 }
 
-//
-//public static void main(String[] args) {
-//    String str = "sjkdfkdshdskghdfkdslkjmsdcdksfsdfc";
-//
-//    Set<Character> set = new TreeSet<>();
-//
-//    for (int i = 0; i < str.length(); i++) {
-//        char ch = str.charAt(i);
-//        set.add(ch);
-//    }
-//
-//    for (Character ch : set) {
-//        System.out.println("ch = " + ch);
-//    }
-//
-//}
