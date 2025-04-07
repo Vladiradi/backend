@@ -48,6 +48,27 @@ public class DateTime {
 
             ZonedDateTime midwayTime = ZonedDateTime.now(ZoneId.of("Pacific/Midway"));
             System.out.println("Время в Pacific/Midway: " + midwayTime.format(DateTimeFormatter.ofPattern("dd MMMM yyyy HH:mm:ss z", new Locale("ru"))));
+
+            // 9) Получить возраст человека
+            Period age = Period.between(birthDate, LocalDate.now());
+            System.out.println("Возраст: " + age.getYears() + " лет, " + age.getMonths() + " месяцев, " + age.getDays() + " дней");
+
+
+            LocalTime nowTime = LocalTime.now();
+            LocalTime workStart = LocalTime.of(9, 0);
+            Duration untilWork;
+
+            if (nowTime.isBefore(workStart)) {
+                untilWork = Duration.between(nowTime, workStart);
+                System.out.println("До начала работы осталось: " +
+                        untilWork.toHoursPart() + " часов " +
+                        untilWork.toMinutesPart() + " минут");
+            } else {
+                untilWork = Duration.between(workStart, nowTime);
+                System.out.println("Вы опоздали на: " +
+                        untilWork.toHoursPart() + " часов " +
+                        untilWork.toMinutesPart() + " минут");
+            }
         }
     }
 
