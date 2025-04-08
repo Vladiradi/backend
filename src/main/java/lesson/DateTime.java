@@ -49,7 +49,7 @@ public class DateTime {
             ZonedDateTime midwayTime = ZonedDateTime.now(ZoneId.of("Pacific/Midway"));
             System.out.println("Время в Pacific/Midway: " + midwayTime.format(DateTimeFormatter.ofPattern("dd MMMM yyyy HH:mm:ss z", new Locale("ru"))));
 
-            // 9) Получить возраст человека
+
             Period age = Period.between(birthDate, LocalDate.now());
             System.out.println("Возраст: " + age.getYears() + " лет, " + age.getMonths() + " месяцев, " + age.getDays() + " дней");
 
