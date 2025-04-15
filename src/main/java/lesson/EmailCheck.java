@@ -1,27 +1,71 @@
 package lesson;
-//Написать регулярное выражение для проверка email (например my_25@domen-38.de).
 import java.util.Scanner;
-import java.util.regex.Pattern;
+//Написать регулярное выражение для проверка email (например my_25@domen-38.de).
+
+public classgit
+
+
+//    import java.util.Scanner;
+//import java.util.regex.Pattern;
+//
+//public class EmailValidator {
+//    private static Pattern emailPattern = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.de$");
+//
+//    public static boolean isValidEmail(String email) {
+//        return emailPattern.matcher(email).matches();
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        while (true) {
+//            System.out.print("Введите email для проверки (или 'exit' для выхода): ");
+//            String email = scanner.nextLine();
+//
+//            if (email.equalsIgnoreCase("exit")) {
+//                System.out.println("Выход из программы.");
+//                break;
+//            }
+//
+//            if (isValidEmail(email)) {
+//                System.out.println("✅ Email корректный (.de и @ есть)");
+//            } else {
+//                System.out.println("❌ Email некорректный (нужны @ и .de)");
+//            }
+//        }
+//
+//        scanner.close();
+//    }
+//}
+
+
+
 
 public class EmailCheck {
 
-        private static Pattern emailPattern = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.de$");
+    public static boolean isValidEmail(String email) {
+        return email.contains("@") && email.endsWith(".de");
+    }
 
-        public static boolean isValidEmail(String email) {
-            return emailPattern.matcher(email).matches();
-        }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Введите email для проверки: ");
+        while (true) {
+            System.out.print("Введите email (или 'exit' для выхода): ");
             String email = scanner.nextLine();
 
-            if (isValidEmail(email)) {
-                System.out.println("✅ Email is correct");
-            } else {
-                System.out.println("❌ Email not correct (you need @ and .de)");
+            if (email.equalsIgnoreCase("exit")) {
+                System.out.println("Выход.");
+                break;
             }
 
-            scanner.close();
+            if (isValidEmail(email)) {
+                System.out.println("✅ Email корректный (@ и .de найдены)");
+            } else {
+                System.out.println("❌ Email некорректный (нужны @ и .de)");
+            }
         }
+
+        scanner.close();
     }
+}
