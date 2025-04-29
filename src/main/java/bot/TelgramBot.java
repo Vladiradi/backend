@@ -1,12 +1,7 @@
-//1. Представьте, что Вы ревьювите код в классе, который написал Ваш коллега.
-//        Вас не устраиват реализация некоторых методов в классе, характеристик и есть
-//        даже замечания по реализации самого класса.
-//        Вам нужно создать аннотацию, которой Вы можете пометить вышеуказанные участки кода,
-//        указать в ней ФИО ревьювера и написать в ней комментарий, в чем же Вы видите проблему.
 
 //Здесь я сделал ревью собственного телеграмм бота тестовая версия
 
-package annotation;
+package bot;
 import java.util.Map;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -15,7 +10,6 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import java.util.Map;
 import annotation.Review;
 
 @Review(
@@ -38,9 +32,7 @@ public class TelegramBot extends MultiSessionTelegramBot {
     @Override
     @Review(
             reviewedBy = "Vladimir Ryzhov",
-            comment = "много последовательных if’ов по одинаковой логике. Рекомендую:
-  - Вынести логику работы с сообщениями в отдельный сервис/компонент
-  - Проверять null для getMessageText() и getCallbackQueryButtonKey() во избежание NPE."
+            comment = "много последовательных if’ов по одинаковой логике. - Вынести логику работы с сообщениями в отдельный сервис/компонент - Проверять null для getMessageText() и getCallbackQueryButtonKey() во избежание NPE."
     )
 
     public void onUpdateEventReceived(Update updateEvent) {
