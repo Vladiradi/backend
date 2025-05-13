@@ -1,4 +1,6 @@
-package tasktread;
+package taskthread;
+
+
 public class PrimeCounterApp {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(new PrimeCounter("Thread-1"));
