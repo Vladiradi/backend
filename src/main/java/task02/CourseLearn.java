@@ -37,7 +37,7 @@ public class CourseLearn {
         }
 
 
-        System.out.println("\n✅ The company has reached its profit goal!");
+        System.out.println("\nThe company has reached its profit goal!");
         System.out.println(" Total students enrolled: " + totalStudentCount.get());
         System.out.println("Total company profit: €" + totalCompanyProfit.get());
         System.out.println("Total teacher earnings: €" + totalTeacherEarnings.get());
@@ -60,7 +60,7 @@ public class CourseLearn {
             totalCompanyProfit.addAndGet(companyShare);
             totalTeacherEarnings.addAndGet(teacherShare);
             if (totalStudentCount.get() % STUDENTS_PER_GROUP == 0) {
-                System.out.println("📢 A new group of " + STUDENTS_PER_GROUP + " students has been formed.");
+                System.out.println("✅ A new group of " + STUDENTS_PER_GROUP + " students has been formed.");
             }
 
 
