@@ -15,7 +15,6 @@ public class CourseLearn {
     private static final int COURSE_PRICE = 1000;
     private static final int PROFIT_GOAL = 1_000_000;
     private static final int STUDENTS_PER_GROUP = 10;
-
     private static final AtomicInteger totalCompanyProfit = new AtomicInteger(0);
     private static final AtomicInteger totalTeacherEarnings = new AtomicInteger(0);
     private static final AtomicInteger totalStudentCount = new AtomicInteger(0);
@@ -55,7 +54,7 @@ public class CourseLearn {
             totalStudentCount.incrementAndGet();
 
 
-            int teacherShare = COURSE_PRICE / 10;        // 10% for teacher
+            int teacherShare = COURSE_PRICE / 10;
             int companyShare = COURSE_PRICE - teacherShare;
 
             totalCompanyProfit.addAndGet(companyShare);
