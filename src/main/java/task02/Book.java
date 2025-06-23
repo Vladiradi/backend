@@ -69,7 +69,7 @@ public class Book {
         editorsDone.await();
         System.out.println("Книга утверждена! Печать...");
 
-        // Печать → Переплет → Доставка
+        // Печать -> Доставка
         Thread printer = new Thread(() -> {
             System.out.println("Печатник печатает книгу...");
             sleep(1000);
